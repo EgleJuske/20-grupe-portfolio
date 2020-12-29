@@ -1,7 +1,7 @@
 /* header */
 /* hero */
 /* about */
-/* hobbie */
+/* hobbies */
 /* achievements */
 /* services */
 /* job history */
@@ -19,7 +19,7 @@
 /* header */
 /* hero */
 /* about */
-/* hobbie */
+/* hobbies */
 /* achievements */
 /* services */
 /* job history */
