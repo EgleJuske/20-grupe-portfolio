@@ -1,9 +1,3 @@
-/* reset, main */
-@import './components/varbiables.css';
-@import './components/reset.css';
-/* 3rd party */
-@import './components/bootstrap-grid.min.css';
-/* components */
 @import './components/about-me.css';
 @import './components/achievements.css';
 @import './components/banner.css';
