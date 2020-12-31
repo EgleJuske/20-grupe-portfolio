@@ -1,6 +1,8 @@
 // ALL IMPORT
 
 /* header */
+import { menuData } from './data/menuData.js';
+import { Menu } from './components/menu/Menu.js';
 /* hero */
 /* about */
 /* hobbies */
@@ -19,6 +21,8 @@
 // CODE EXECUTION
 
 /* header */
+const menu = new Menu(menuData);
+menu.init();
 /* hero */
 /* about */
 /* hobbies */
