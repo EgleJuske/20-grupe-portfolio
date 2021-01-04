@@ -1,0 +1,31 @@
+#hobbies_block {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hobbie-item {
+  padding: 15px;
+}
+
+.hobbie-item > .content {
+  background-color: #eee;
+  line-height: 20px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.hobbie-item > .content > .fa {
+  line-height: inherit;
+  padding: 15px;
+}
+
+.hobbie-item > .content > span {
+  font-weight: 500;
+  line-height: inherit;
+  padding: 15px;
+  border-left: 1px solid #ccc;
+}
