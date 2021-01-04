@@ -6,6 +6,8 @@ import { Menu } from './components/menu/Menu.js';
 /* hero */
 /* about */
 /* hobbies */
+import { hobbiesData } from './data/hobbiesData.js'
+import { renderHobbies } from './components/hobbies/renderHobbies.js'
 /* achievements */
 /* services */
 /* job history */
@@ -26,6 +28,12 @@ menu.init();
 /* hero */
 /* about */
 /* hobbies */
+renderHobbies({
+    selector: '#hobbies_block',
+    data: hobbiesData,
+    limit: 12,
+    borderRadius: 4
+});
 /* achievements */
 /* services */
 /* job history */
