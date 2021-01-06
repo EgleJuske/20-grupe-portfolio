@@ -16,25 +16,37 @@ const hobbiesData = [
         title: 'Coffee'
     },
     {
-        icon: 'television',
-        title: 'Television'
+        icon: 'music',
+        title: 'Music'
     },
     {
-        icon: 'apple',
-        title: 'mac OS'
+        icon: 'gamepad',
+        title: 'Games'
     },
     {
-        icon: 'video-camera',
-        title: 'Cinema'
+        icon: 'cube',
+        title: 'Designing'
     },
     {
-        icon: 'coffee',
-        title: 'Coffee'
+        icon: 'bicycle',
+        title: 'Sports'
     },
     {
-        icon: 'coffee',
-        title: 'Coffee'
-    }
+        icon: 'pencil',
+        title: 'Painting'
+    },
+    {
+        icon: 'book',
+        title: 'Reading'
+    },
+    {
+        icon: 'android',
+        title: 'Android'
+    },
+    {
+        icon: 'spinner',
+        title: 'Other Activity'
+    },
 ]
 
 export { hobbiesData }
