@@ -11,8 +11,8 @@ function findIfValidSelector(selector) {
     if (!DOM) {
         return false;
     }
-
     return DOM;
+    
 }
 
 export { findIfValidSelector }

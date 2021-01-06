@@ -17,7 +17,7 @@ const hobbiesData = [
     },
     {
         icon: 'television',
-        title: 'very much text so much wow'
+        title: 'Television'
     },
     {
         icon: 'apple',
