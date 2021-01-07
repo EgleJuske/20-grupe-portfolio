@@ -6,9 +6,11 @@ import { Menu } from './components/menu/Menu.js';
 /* hero */
 /* about */
 /* hobbies */
-import { hobbiesData } from './data/hobbiesData.js'
-import { renderHobbies } from './components/hobbies/renderHobbies.js'
+import { hobbiesData } from './data/hobbiesData.js';
+import { renderHobbies } from './components/hobbies/renderHobbies.js';
 /* achievements */
+import { Achievements } from './components/achievements/Achievements.js';
+import { achievementsData } from './data/achievementsData.js';
 /* services */
 /* job history */
 /* work expertise */
@@ -35,6 +37,9 @@ renderHobbies({
     borderRadius: 4
 });
 /* achievements */
+const achievements = new Achievements(achievementsData);
+achievements.init();
+achievements.addEvents();
 /* services */
 /* job history */
 /* work expertise */

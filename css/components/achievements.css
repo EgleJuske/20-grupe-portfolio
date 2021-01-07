@@ -1,0 +1,50 @@
+.achievements {
+  background-image: url(../../img/bg-counter.jpg);
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background-position: 70%;
+  width: 96%;
+  display: flex;
+  color: white;
+  border-radius: 5px;
+  margin-left: 2%;
+  text-transform: capitalize;
+}
+
+.achievement-item {
+  text-align: center;
+}
+
+.achievement-item div + div {
+  margin-top: 20px;
+}
+
+.achievement-item .fa {
+  font-size: 30px;
+  color: var(--main-color-light);
+}
+
+.achievement-item .achievement-number {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.achievement-item .achievement-label {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.achievements-placeholder {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+@media (max-width: 990px) {
+  .achievement-item {
+    width: 35%;
+  }
+}
