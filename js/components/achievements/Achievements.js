@@ -85,11 +85,10 @@ class Achievements {
 
     animateNumber(index, DOM) {
         const windowBottom = scrollY + innerHeight;
-        const numberBottom = DOM.offsetTop + DOM.offsetHeight;
-        console.log(numberBottom);
+        const offsetSection = document.querySelector('.offset-section');
+        const sectionMiddle = offsetSection.offsetTop + (offsetSection.offsetHeight / 2);
 
-        // ERROR: NEVEIKIA numberBottom, nes offsetTop yra mažas!!!!
-        if (windowBottom > numberBottom) {
+        if (windowBottom > sectionMiddle) {
 
             //saugiklis, kuris animacija paleidzia viena karta
             if (this.validUsedData[index].animated) {
