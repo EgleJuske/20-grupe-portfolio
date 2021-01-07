@@ -39,6 +39,7 @@ renderHobbies({
 /* achievements */
 const achievements = new Achievements(achievementsData);
 achievements.init();
+achievements.addEvents();
 /* services */
 /* job history */
 /* work expertise */

@@ -7,6 +7,9 @@ class Achievements {
         this.data = params.data;
         this.defaultLimit = 4;
         this.DOM = null;
+        this.validUsedData = [];
+        this.animationDuration = 5;
+        this.fps = 30;
     }
 
     init() {
@@ -63,6 +66,7 @@ class Achievements {
             if (!isValidAchiementItem(item)){
                 continue;
             }
+            this.validUsedData.push(item);
             HTML += `<div class="achievement-item">
                         <div class="fa fa-${item.icon}"></div>
                         <div class="achievement-number">${item.number}</div>
@@ -77,6 +81,45 @@ class Achievements {
         }
         
         this.DOM.innerHTML = HTML;
+    }
+
+    animateNumber(index, DOM) {
+        const windowBottom = scrollY + innerHeight;
+        const offsetSection = document.querySelector('.offset-section');
+        const sectionMiddle = offsetSection.offsetTop + (offsetSection.offsetHeight / 2);
+
+        if (windowBottom > sectionMiddle) {
+
+            //saugiklis, kuris animacija paleidzia viena karta
+            if (this.validUsedData[index].animated) {
+                return false;
+            }
+            this.validUsedData[index].animated = true;
+
+            //animacijos logika
+            let step = 0;
+            const increment = this.validUsedData[index].number / this.animationDuration / this.fps;
+
+            const timer = setInterval(() => {
+                const value = Math.floor(increment * step);
+                step++;
+                DOM.innerText = value;
+
+                if (value >= this.validUsedData[index].number) {
+                    DOM.innerText = this.validUsedData[index].number;
+                    clearInterval(timer);
+                }
+            }, 1000 / this.fps);
+        }
+    }
+
+    addEvents() {
+        addEventListener('scroll', () => {
+            const numberDOM = document.querySelectorAll('.achievement-number');
+            for (let i = 0; i < this.validUsedData.length; i++) {
+                this.animateNumber(i, numberDOM[i]);
+            }
+        })
     }
 }
 
