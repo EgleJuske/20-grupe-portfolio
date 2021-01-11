@@ -1,5 +1,24 @@
 .btn {
   display: inline-block;
+  background-color: var(--main-color-light);
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.btn-transparent {
+  display: inline-block;
+  background-color: transparent;
+  padding: 10px 20px;
+  color: var(--main-color-light);
+  border: 1px solid var(--main-color-light);
+  font-weight: 500;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .btn:hover {
