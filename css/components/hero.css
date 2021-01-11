@@ -1,5 +1,13 @@
 .hero {
-  background-color: #999;
+  background-color: #f9fafd;
+  background-image: url(../../img/hero-1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
-  height: 800px;
+  padding: 200px 0;
+}
+
+.hero-button-placeholder {
+  margin-top: 30px;
 }

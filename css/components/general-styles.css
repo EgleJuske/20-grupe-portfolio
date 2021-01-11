@@ -1,4 +1,11 @@
-.section-title h2 {
+h1 {
+  color: var(--main-color-light);
+  font-size: 45px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+h2 {
   text-align: center;
   font-size: 30px;
   text-transform: uppercase;
@@ -6,9 +13,14 @@
   margin-bottom: 20px;
 }
 
-.section-title p {
-  text-align: center;
+p {
   font-size: 16px;
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #777;
+}
+
+h3 {
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 10px;
 }

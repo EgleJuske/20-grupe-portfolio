@@ -5,6 +5,10 @@
   justify-content: center;
 }
 
+.section-title p {
+  text-align: center;
+}
+
 .hobbie-item {
   padding: 15px;
 }
