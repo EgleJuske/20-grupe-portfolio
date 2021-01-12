@@ -8,7 +8,7 @@ class Achievements {
         this.defaultLimit = 4;
         this.DOM = null;
         this.validUsedData = [];
-        this.animationDuration = 5;
+        this.animationDuration = 3;
         this.fps = 30;
     }
 
