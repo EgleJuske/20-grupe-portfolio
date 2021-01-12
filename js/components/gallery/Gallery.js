@@ -50,6 +50,7 @@ class Gallery {
 
 
     render() {
+        const filterHTML = this.generateGalleryFilter();
         let listHTML = '';
 
         for (const item of this.data) {
@@ -62,7 +63,7 @@ class Gallery {
 
 
         this.DOM.innerHTML = `<div class="gallery">
-                                <div class="filter"></div>
+                                <div class="filter">${filterHTML}</div>
                                 <div class="list">${listHTML}</div>
                             </div>`;
     }
@@ -78,12 +79,50 @@ class Gallery {
      */
     generateGalleryItem(item) {
         return `<div class="item">
-                    <img src="${item.image}" alt="${item.alt}">
+                    <img class="img" src="${item.image}" alt="${item.alt}">
                     <div class="texts">
-                    <div class="title">${item.title}</div>
-                    <div class="subtitle">${item.subtitle}</div>
+                        <div class="title">${item.title}</div>
+                        <div class="subtitle">${item.subtitle}</div>
+                        <div class="tags">${item.tags.join(' &#9679; ')}</div>
                     </div>
                  </div>`;
+    }
+
+    generateGalleryFilter() {
+        // is visu darbu isrinkti tik tag'us
+        let allTags = [];
+        for (const item of this.data) {
+            // for (const tag of item.tags) {
+            //     allTags.push(tag);
+            // }
+            allTags = [...allTags, ...item.tags];
+        }
+
+        // visus tagus paverciame mazosiomis raidemis
+        // for (let i = 0; i < allTags.length; i++) {
+        //     allTags[i] = allTags[i].toLowerCase();
+        // }
+
+        const formatedTags = allTags.map( tag => tag.toLowerCase() )
+
+        // atfiltruojame tik unikalius tag'us
+        const uniqueTags = [];
+        for (const tag of formatedTags) {
+            if (!uniqueTags.includes(tag)) {
+                uniqueTags.push(tag);
+            }
+        }
+
+        // generuojame HTML
+        let HTML = `<div class="tag active">All</div>`;
+
+        for (const tag of uniqueTags) {
+            HTML += `<div class="tag">${tag}</div>`;
+        }
+
+        // graziname HTML
+        return HTML;
+
     }
 }
 
