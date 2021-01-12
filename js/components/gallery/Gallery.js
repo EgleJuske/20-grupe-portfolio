@@ -11,6 +11,11 @@ class Gallery {
         this.init();
     }
 
+    /**
+     * Automatiskai paleidziamas metodas, kai yra kuriamas 'Gallery' klases objektas
+     * @returns {void}
+     */
+
     init() {
         if (!this.isValidSelector()) {
             return false;
@@ -43,6 +48,7 @@ class Gallery {
         return true;
     }
 
+
     render() {
         let listHTML = '';
 
@@ -61,6 +67,15 @@ class Gallery {
                             </div>`;
     }
 
+    /**
+     * Sukonstruoja galerijos elementa reprezentuojanti HTML tekstini turini
+     * @param {Object} item Objektas aprasantis viena galerijos saraso elementa
+     * @param {string} item.title Galerijos elemento pavadinimas
+     * @param {string} item.alt Galerijos elemento nuotraukos alternatyvus pavadinimas
+     * @param {string} item.subtitle Galerijos elemento sub-pavadinimas
+     * @param {string} item.image Galerijos elemento nuotraukos nuoroda
+     * @returns {string} HTML teksas
+     */
     generateGalleryItem(item) {
         return `<div class="item">
                     <img src="${item.image}" alt="${item.alt}">
