@@ -16,6 +16,7 @@ import { achievementsData } from './data/achievementsData.js';
 /* work expertise */
 /* portfolio */
 import { Gallery } from './components/gallery/Gallery.js';
+import { galleryData} from './data/galleryData.js';
 /* testimonials */
 /* blog */
 /* hire me banner */
@@ -45,8 +46,9 @@ achievements.addEvents();
 /* job history */
 /* work expertise */
 /* portfolio */
-// const gallery = new Gallery(params);
-// console.log(gallery);
+const gallery = new Gallery(galleryData);
+console.log(gallery);
+gallery.init();
 /* testimonials */
 /* blog */
 /* hire me banner */

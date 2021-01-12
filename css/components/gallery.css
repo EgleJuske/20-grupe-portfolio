@@ -1,0 +1,13 @@
+.gallery .list {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+}
+
+.gallery .item {
+  width: 100%;
+}
+
+#portfolio_block .item img {
+  width: 100%;
+}

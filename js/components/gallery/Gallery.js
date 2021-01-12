@@ -1,8 +1,8 @@
 class Gallery {
     constructor(params) {
-        if (this.isValidInput(params)) {
-            return false;
-        }
+        // if (this.isValidInput(params)) {
+        //     return false;
+        // }
 
         this.selector = params.selector;
         this.data = params.data;
@@ -12,13 +12,10 @@ class Gallery {
     }
 
     init() {
-        /* jei validus selectorius
-            susirasti DOM
-            render
-            add event listener
-        o jei ne
-            return false
-        */
+        if (!this.isValidSelector()) {
+            return false;
+        }
+        this.render();
     }
 
     isValidSelector() {
@@ -27,6 +24,7 @@ class Gallery {
             return false;
         }
 
+        this.DOM = DOM;
         return true;
     }
 
@@ -46,7 +44,31 @@ class Gallery {
     }
 
     render() {
-        
+        let listHTML = '';
+
+        for (const item of this.data) {
+            listHTML += this.generateGalleryItem(item);
+        }
+
+        if (listHTML === '') {
+            return false;
+        }
+
+
+        this.DOM.innerHTML = `<div class="gallery">
+                                <div class="filter"></div>
+                                <div class="list">${listHTML}</div>
+                            </div>`;
+    }
+
+    generateGalleryItem(item) {
+        return `<div class="item">
+                    <img src="${item.image}" alt="${item.alt}">
+                    <div class="texts">
+                    <div class="title">${item.title}</div>
+                    <div class="subtitle">${item.subtitle}</div>
+                    </div>
+                 </div>`;
     }
 }
 
